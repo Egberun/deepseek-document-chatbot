@@ -1,0 +1,54 @@
+# DeepSeek Document Chatbot: Sample Document
+
+This is a sample document that demonstrates how the DeepSeek Document Chatbot works with text files in the knowledge base.
+
+## About DeepSeek LLM
+
+DeepSeek LLM is a powerful language model developed by DeepSeek AI. It's designed to understand and generate human-like text based on the input it receives. The model can be used for a variety of natural language processing tasks, including:
+
+- Text generation
+- Question answering
+- Summarization
+- Translation
+- Code generation
+
+## Document Retrieval Process
+
+When you ask a question, the chatbot follows these steps:
+
+1. **Vectorization**: Your query is converted into a vector representation using an embedding model.
+2. **Similarity Search**: The system searches for document chunks in the vector database that are semantically similar to your query.
+3. **Context Building**: The most relevant document chunks are combined to create context for the language model.
+4. **Response Generation**: DeepSeek LLM generates a response based on the retrieved context and your question.
+5. **Source Attribution**: The chatbot provides references to the source documents used to answer your question.
+
+## Sample Questions
+
+You can try asking the chatbot questions like:
+
+- "What is DeepSeek LLM?"
+- "How does the document retrieval process work?"
+- "What can DeepSeek LLM be used for?"
+- "Explain the vectorization process"
+
+The chatbot should be able to provide accurate answers based on the information in this document.
+
+## Customization Options
+
+The DeepSeek Document Chatbot can be customized in several ways:
+
+- **Prompt Templates**: Different system prompts can be used for various use cases
+- **Model Parameters**: Adjust temperature, max tokens, and other generation parameters
+- **Embedding Models**: Change the embedding model for different retrieval characteristics
+- **Chunk Size**: Modify how documents are split for more effective retrieval
+
+## Limitations
+
+While powerful, the system has some limitations:
+
+- It can only answer based on information present in the knowledge base
+- The quality of responses depends on the quality and relevance of the documents
+- Complex reasoning might require additional context or human intervention
+- The system works best with well-structured, clear text documents
+
+For more information, please refer to the project documentation.
