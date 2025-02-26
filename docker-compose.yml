@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  chatbot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "7860:7860"
+    volumes:
+      - ./documents:/data/documents
+      - ./chroma_db:/data/chroma_db
+      - ./logs:/app/logs
+      - ./conversations:/app/conversations
+    environment:
+      - MODEL_NAME=deepseek-ai/deepseek-llm-7b-chat
+      - USE_GPU=true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
