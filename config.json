@@ -1,0 +1,26 @@
+{
+  "document_dir": "./documents",
+  "vector_db_path": "./chroma_db",
+  "chunk_size": 1000,
+  "chunk_overlap": 100,
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "llm_model": "deepseek-ai/deepseek-llm-7b-chat",
+  "use_gpu": true,
+  "max_new_tokens": 512,
+  "temperature": 0.7,
+  "num_results": 3,
+  "memory_size": 5,
+  "use_cli": false,
+  "ui_theme": "default",
+  "ui_title": "DeepSeek Document Chatbot",
+  "log_level": "INFO",
+  "cache_dir": "./.cache",
+  "custom_prompts": {
+    "technical": {
+      "system_prompt": "You are a technical support AI assistant. Provide clear, step-by-step solutions to technical problems based on the provided documentation. Use technical terminology appropriately. If the solution is not in the documentation, suggest troubleshooting steps and escalation paths."
+    },
+    "legal": {
+      "system_prompt": "You are a legal assistant AI. Provide information based on the legal documents in the knowledge base. Always clarify that you are not providing legal advice and recommend consulting with a qualified attorney for specific legal matters. Be precise with your language and cite sources where possible."
+    }
+  }
+}
