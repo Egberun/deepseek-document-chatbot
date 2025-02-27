@@ -10,6 +10,7 @@ A document-based chatbot system using DeepSeek LLM for intelligent question answ
 - 🎯 **Customizable Prompts**: Tailor the system to different use cases and domains
 - 🌐 **Web Interface**: User-friendly interface for easy interaction
 - 📊 **Monitoring & Evaluation**: Comprehensive tools for performance tracking
+- 🐳 **Docker Support**: Connect to models running in Docker containers
 
 ## Quick Start
 
@@ -43,6 +44,16 @@ python main.py --cli
 ```bash
 python advanced_web_ui.py
 ```
+
+### Using with Docker Container
+
+If you have DeepSeek running in a Docker container that exposes an API endpoint, you can use it with this example:
+
+```bash
+python example_docker_usage.py --api-url http://localhost:8000/v1/completions --api-type openai
+```
+
+Replace the URL with your actual API endpoint. This script supports different API formats including OpenAI-compatible APIs.
 
 ## Configuration
 
@@ -86,6 +97,7 @@ The DeepSeek Document Chatbot consists of three main components:
 - **Conversation Export**: Save conversations for later reference
 - **Customizable Prompts**: Choose different prompt templates for various use cases
 - **Performance Monitoring**: Track usage and response times
+- **Docker Integration**: Connect to models running in containers
 
 ## License
 
