@@ -34,6 +34,21 @@ class TestDocumentProcessor(unittest.TestCase):
         shutil.rmtree(self.test_dir)
         shutil.rmtree(self.vector_db_path)
 
+    def test_init(self):
+        """Test DocumentProcessor initialization"""
+        processor = DocumentProcessor(
+            document_dir=self.test_dir,
+            vector_db_path=self.vector_db_path,
+            chunk_size=500,
+            chunk_overlap=50
+        )
+        
+        # Check if attributes are correctly set
+        self.assertEqual(processor.document_dir, self.test_dir)
+        self.assertEqual(processor.vector_db_path, self.vector_db_path)
+        self.assertEqual(processor.chunk_size, 500)
+        self.assertEqual(processor.chunk_overlap, 50)
+
     @pytest.mark.skipif(not os.environ.get("RUN_INTEGRATION_TESTS"), 
                        reason="Integration test - requires external dependencies")
     def test_load_documents(self):
